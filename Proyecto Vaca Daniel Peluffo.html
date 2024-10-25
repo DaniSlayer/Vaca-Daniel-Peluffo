@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Proyecto Vaca Daniel Peluffo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(#57beff, #bfe7ff);
+        }
+
+        .vaca {
+            position: relative;
+            width: 190px;
+            height: 160px;
+            background-color: #fff;
+            border-radius: 50px;
+        }
+
+        .cabeza {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background-color: #fff;
+            border-radius: 20px;
+            top: -50px;
+            left: 50px;
+            z-index: 2;
+        }
+
+        .oreja {
+            position: absolute;
+            width: 20px;
+            height: 80px;
+            background-color:#F7C6A3;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            z-index: 1;
+        }
+        .oreja.izquierda {
+            top: -80px;
+            left: 30px;
+            transform: rotate(-100deg);
+        }
+        .oreja.derecha {
+            top: -80px;
+            right: 30px;
+            transform: rotate(100deg);
+        }
+
+        .ojo {
+            position: absolute;
+            top: 35px;
+            width: 30px;
+            height: 5px;
+            background-color: transparent;
+            border: 2px solid #000;
+            border-radius: 50px;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            border-left-color: transparent;
+        }
+        .ojo.izquierdo {
+            left: 10px;
+        }
+        .ojo.derecho {
+            right: 10px;
+        }
+
+        .hocico {
+            position: absolute;
+            top: 60px;
+            left: 15px;
+            width: 60px;
+            height: 35px;
+            background-color: #F7B299;
+            border-radius: 50px;
+        }
+        .nariz {
+            position: absolute;
+            width: 10px;
+            height: 5px;
+            background-color: #000;
+            border-radius: 50%;
+            top: 5px;
+        }
+        .nariz.izquierda {
+            left: 15px;
+        }
+        .nariz.derecha {
+            right: 15px;
+        }
+
+        .boca {
+            position: absolute;
+            top: 25px;
+            left: 15px;
+            width: 30px;
+            height: 5px;
+            background-color: transparent;
+            border-bottom: 2px solid #000;
+            border-radius: 50%;
+        }
+
+        .brazo {
+            position: absolute;
+            width: 40px;
+            height: 70px;
+            background-color: #fff;
+            border-radius: 20px;
+            transform-origin: bottom;
+            z-index: -1;
+        }
+        .brazo.izquierdo {
+            left: 5px;
+            top: -30px;
+            transform: rotate(-70deg);
+        }
+        .brazo.derecho {
+            right: 5px;
+            top: -30px;
+            transform: rotate(70deg);
+        }
+
+        .mancha {
+            position: absolute;
+            background-color: #000;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .mancha.uno {
+            width: 50px;
+            height: 35px;
+            top: 10px;
+            left: 20px;
+        }
+        .mancha.dos {
+            width: 45px;
+            height: 25px;
+            top: 30px;
+            right: 15px;
+            transform: rotate(40deg); 
+        }
+        .mancha.tres {
+            width: 40px;
+            height: 20px;
+            top: 90px;
+            left: 10px;
+            transform: rotate(-40deg);
+        }
+
+        .pierna {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: #000;
+            border-radius: 50%;
+            bottom: -10px;
+        }
+        .pierna.izquierda {
+          top: 130px;
+            left: 10px;
+        }
+        .pierna.derecha {
+          top: 130px;
+            right: 10px;
+        }
+        
+        .pecho {
+            position: relative;
+            left: 64px;
+            top: 70px;
+            width: 60px;
+            height: 80px;
+            background-color: #F7C6A3;
+            border-radius: 30px;
+        }
+        
+        .cola {
+            width: 260.5px;
+            height: 110px;
+            border: solid 15px white;
+            border-top: none;
+            border-left: none;
+            position: absolute;
+            z-index: -4;
+            border-radius: 100%;
+            bottom: 9%;
+            top: -5px;
+            left: -80px;
+            transform: rotate(-25deg);
+        }
+        .cola:after {
+            content: "";
+            background: black;
+            width: 45.5px;
+            height: 56px;
+            display: block;
+            position: absolute;
+            bottom: 18%;
+            left: -5%;
+            border-radius: 52px 0.01931429px 45.5px;
+            transform: rotate(-60deg);
+}
+        .correccion {
+          position: absolute;
+          width: 80px;
+          height: 56px;
+          left: 150px;
+          top: -20px;
+          background-color:#87d1ff;
+          z-index: -3;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="vaca">
+    <div class="pecho"></div>
+    <div class="cola"></div>
+    <div class="correccion"></div>
+     <div class="oreja izquierda"></div>
+     <div class="oreja derecha"></div>
+     <div class="cabeza">
+       <div class="ojo izquierdo"></div>
+       <div class="ojo derecho"></div>
+        <div class="hocico">
+         <div class="nariz izquierda"></div>
+         <div class="nariz derecha"></div>
+          <div class="boca"></div>
+            </div>
+        </div>
+        <div class="mancha uno"></div>
+        <div class="mancha dos"></div>
+        <div class="mancha tres"></div>
+        <div class="pierna izquierda"></div>
+        <div class="pierna derecha"></div>
+        <div class="brazo izquierdo"></div>
+        <div class="brazo derecho"></div>
+    </div>
+</body>
+</html>
